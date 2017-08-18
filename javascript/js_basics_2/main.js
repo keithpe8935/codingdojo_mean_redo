@@ -11,6 +11,11 @@ function magic_multiply(x, y){
       return undefined; // Should we return null or undefined.
     }
 
+    // For test 5 we want to return a string, repeated 'y' times.
+    if (typeof x === 'string'){
+      return x.repeat(y);
+    }
+
     // For test 3 we need to check if x is an array and multiple each of
     // it's elements by y
     console.log('typeof x', typeof x);
