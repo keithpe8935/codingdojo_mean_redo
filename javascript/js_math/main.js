@@ -15,9 +15,9 @@ function zero_negativity(arr){
 let arr = [1,2,3,4,1,5,-2,3,4,1,5]
 //let arr = [1,2,3,4,1,5,4,1,5]
 if (zero_negativity(arr)){
-  //console.log('The array did NOT contain any negative numbers');
+  console.log('The array did NOT contain any negative numbers');
 } else {
-  //console.log('The array contained AT LEAST ONE negative number');
+  console.log('The array contained AT LEAST ONE negative number');
 }
 
 // Math 2
@@ -35,9 +35,9 @@ function is_even(number){
 
 let number = 12;
 if (is_even(number)){
-  //console.log(`${number} is an EVEN number`);
+  console.log(`${number} is an EVEN number`);
 } else {
-  //console.log(`${number} is NOT an EVEN number`);
+  console.log(`${number} is NOT an EVEN number`);
 }
 
 // Math 3
@@ -56,7 +56,7 @@ function how_many_even(arr){
 }
 
 let number_of_even_elements = how_many_even(arr);
-//console.log(`There were ${number_of_even_elements} even numbers in [${arr}]`)
+console.log(`There were ${number_of_even_elements} even numbers in [${arr}]`)
 
 // Math 4
 // Write a function called create_dummy_array(). This function should take
@@ -77,7 +77,7 @@ function create_dummy_array(n){
   return arr;
 }
 
-// console.log(create_dummy_array(14));
+console.log(create_dummy_array(14));
 
 // Math 5
 // Write a function called random_choice(). This function should take an array.
@@ -89,4 +89,4 @@ function random_choice(arr){
   return arr[random];
 }
 
-// console.log('random_choice:',random_choice(arr));
+console.log('random_choice:',random_choice(arr));
