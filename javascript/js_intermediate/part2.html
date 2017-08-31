@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Part II Create a function called drawStars() that takes an array of numbers
+and prints out *.
+
+let x = [4, 6, 1, 3, 5, 7, 25]
+draw_stars(x) should print the following in when invoked:
+
+****
+******
+*
+***
+*****
+*******
+*************************
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Prevent the script from executing until the html file is complete loaded
+    window.onload = function(){
+      // Define the drawStars function
+      function drawStars(arr){
+        // Loop through the elements in the array
+        for(i=0; i < arr.length; i++){
+          // Print the star symbol as many times as the number in each array element
+          console.log('*'.repeat(arr[i]));
+        }
+        // Return true (we could have returned false or just return for Nan)
+        return true;
+      }
+      // Assign an array of numbers to x
+      let x = [4,6,1,3,5,7,25];
+      // Call drawStars, passing the x array 
+      drawStars(x);
+    }
+  </script>
+
+</body>
+</html>

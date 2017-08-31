@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Part I: Create a function called starString() that takes a number
+    and returns a string of that many *. For example:
+
+    let stars = starString(8)
+    If we console.log(stars) we should see ******** printed in our terminal.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>This is a REAL paragraph tag</p>
+<script>
+  // onload prevents any code execution until page is fully loaded.
+  window.onload = function(){
+    // This function takes a number argument and returns a string with that
+    // many stars.
+    function starString(number){
+      return('*'.repeat(number));
+    }
+    // Create variable that contains a string with 8 stars.
+    let stars = starString(8);
+    // Write the variable 'stars' to the console.
+    console.log(stars);
+  };
+</script>
+</body>
+</html>
