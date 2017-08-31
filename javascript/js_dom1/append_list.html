@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Assignment: JavaScript DOM I
+Complete the appendList function. appendList should take an array of strings
+and the id of a <ul> element, and append all elements of the array as
+<li> tags.
+
+Bonus: Create a new function called superAppend that also takes the type
+of element we want to append.
+
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <ul id="main">
+        <!-- this is empty-->
+    </ul>
+    <ol id="main1">
+        <!-- this is empty-->
+    </ol>
+<script>
+    function appendList(array, id){
+        // finish this function
+        for(let i = 0; i < array.length; i++){
+          console.log(array[i]);
+          let ul = document.getElementById(id);
+          let li = document.createElement('li');
+          let node = document.createTextNode(array[i]);
+          li.appendChild(node);
+          ul.appendChild(li);
+        }
+    };
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    let target_id = "main";
+    appendList(students, target_id);
+
+    function superAppend(array, element, id){
+        // element can be p, li, h1, etc etc
+        for(let i = 0; i < array.length; i++){
+          console.log(array[i]);
+          // Define the parent element by id
+          let parentElement = document.getElementById(id);
+          // Define the child element by name
+          childElement = document.createElement(element);
+          // load the array element text into the node
+          let node = document.createTextNode(array[i]);
+          childElement.appendChild(node);
+          parentElement.appendChild(childElement);
+        }
+    };
+
+    let element = 'li';
+    target_id = 'main1';
+    superAppend(students, element, target_id);
+
+</script>
+
+</body>
+</html>
