@@ -38,7 +38,7 @@ function Ninja(name,health,speed,strength){
 // Initiate the Ninja class as 'keith'
 let keith = new Ninja('Keith',50);
 
-// Speed and health should be PRIVATE, only visible via getter functions.
+// Speed and strength should be PRIVATE, only visible via getter functions.
 // To make them private we use var instead of this.
 // So here console.log for speed and strength display undefined instead of the
 // correct values.
