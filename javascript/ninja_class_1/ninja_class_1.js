@@ -2,7 +2,7 @@ function Ninja(name,health,speed,strength){
   this.name = name;
   this.health = (typeof health !== 'undefined' ? health : 100);
 
-  // Speed and Strength are private attributes, so use vart instead of this.
+  // Speed and Strength are private attributes, so use var instead of this.
   var speed = (typeof speed !== 'undefined' ? speed: 3);
   var strength = (typeof strength !== 'undefined' ? strength: 3);
 
