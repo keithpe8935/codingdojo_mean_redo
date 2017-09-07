@@ -1,8 +1,10 @@
 function Ninja(name,health,speed,strength){
   this.name = name;
   this.health = (typeof health !== 'undefined' ? health : 100);
-  this.speed = (typeof speed !== 'undefined' ? speed: 3);
-  this.strength = (typeof strength !== 'undefined' ? strength: 3);
+
+  // Speed and Strength are private attributes, so use vart instead of this.
+  var speed = (typeof speed !== 'undefined' ? speed: 3);
+  var strength = (typeof strength !== 'undefined' ? strength: 3);
 
   // Set the value of the private attribute name.
   this.setName = function(name){
@@ -22,8 +24,8 @@ function Ninja(name,health,speed,strength){
 
   // Display the values of the attributes: name, health, speed and strength
   this.showStats = function(){
-    console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}.`)
-    return [this.strength, this.speed, this.health];
+    console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${speed}, Strength: ${strength}.`)
+    return [strength, speed, this.health];
   }
 
   // Increment the health attribute by 10.
@@ -36,7 +38,10 @@ function Ninja(name,health,speed,strength){
 // Initiate the Ninja class as 'keith'
 let keith = new Ninja('Keith',50);
 
-// Display values for debugging
+// Speed and health should be PRIVATE, only visible via getter functions.
+// To make them private we use var instead of this.
+// So here console.log for speed and strength display undefined instead of the
+// correct values.
 console.log('health',keith.health);
 console.log('speed',keith.speed);
 console.log('strength',keith.strength);
