@@ -1,3 +1,13 @@
+/*
+  ninja_class_3.js is a copy of ninja_class_2.js, but we create the
+  Sensei class by extending the Ninja class. Here we highlight using
+  super to call the parents constructor before calling the Sensei constructor.
+  And then we use super to call the parent class's drinkSake() method.
+
+  I commented out a lot of the code used in the ninja_class_2.js to make
+  it easier to focus on the Sensei Class code.
+*/
+
 class Ninja{
   constructor(name,health,speed,strength){
     this.name = name;
@@ -65,6 +75,23 @@ class Ninja{
   }
 }
 
+class Sensei extends Ninja {
+  constructor(name,health,speed,strength,wisdom){
+    super(name,health,speed,strength);
+    var _wisdom = (typeof wisdom!== 'undefined' ? wisdom : 10);
+
+  }
+    // Putting speakWisdom OUTSIDE the constructor allows the super.drinkSake
+    // to work. If I put it INSIDE the constructor it gave me an error about
+    // super being unexected.
+    speakWisdom(){
+      console.log("Inside speakWisdom: Calling drinkSake (from parent)");
+      super.drinkSake();
+      console.log('What one programmer can do in one month, two programmers can do in two months.')
+    }
+}
+/*
+
 // Initiate the Ninja class as 'keith'
 let keith = new Ninja('Keith',50);
 let eric = new Ninja('Eric',50);
@@ -87,3 +114,12 @@ console.log(`${eric.name}'s CURRENT health: ${eric.health}`);
 console.log(`${keith.name} is about to kick ${eric.name}`)
 keith.kick(eric);
 console.log(`${eric.name}'s NEW health: ${eric.health}`);
+*/
+
+let super_sensei = new Sensei("Master Splinter");
+super_sensei.sayName();
+super_sensei.showStats();
+// speakWisdom also calls drinkSake(), which increases health by 10.
+super_sensei.speakWisdom();
+// Confirm that health has been incremented by 10.
+super_sensei.showStats();
